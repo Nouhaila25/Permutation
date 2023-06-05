@@ -66,6 +66,26 @@ export default function CombinaisonScreen() {
     );
   };
 
+  const renderCombinaisons = () => {
+    const filteredProfesseurs = professeurs.filter((professeur) => professeur.specialite === selectedSpecialite);
+    const combinaisons = filteredProfesseurs.map((professeur) => ({
+      professeurActuel: professeur.nom,
+      villeFaculteActuelle: professeur.villeFaculteActuelle,
+      villeDesiree: professeur.villeDesiree,
+    }));
+
+    return (
+      <View>
+        <Text style={styles.combinaisonsTitle}>Combinaisons :</Text>
+        {combinaisons.map((combinaison, index) => (
+          <Text key={index} style={styles.combinaisonText}>
+            {`${combinaison.professeurActuel} - ${combinaison.villeFaculteActuelle} -> ${combinaison.villeDesiree}`}
+          </Text>
+        ))}
+      </View>
+    );
+  };
+
   return (
     <ScrollView style={styles.container}>
       <View style={styles.dropdownContainer}>
@@ -87,6 +107,7 @@ export default function CombinaisonScreen() {
         <View>
           <Text style={styles.graphTitle}>Graphique des professeurs pour la spécialité {selectedSpecialite}</Text>
           {renderGraph()}
+          {renderCombinaisons()}
         </View>
       ) : null}
 
@@ -131,5 +152,14 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: 'red',
     marginTop: 16,
+  },
+  combinaisonsTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginTop: 16,
+  },
+  combinaisonText: {
+    fontSize: 14,
+    marginTop: 8,
   },
 });
