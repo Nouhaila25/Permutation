@@ -25,7 +25,7 @@ export default function RechercherScreen() {
   const fetchSpecialites = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('https://troubled-red-garb.cyclic.app/professeurs');
+      const response = await fetch('https://tiny-worm-nightgown.cyclic.app/professeurs');
       const data = await response.json();
       const allSpecialites = Array.from(new Set(data.map((item) => item.specialite))).sort();
       setSpecialites(allSpecialites);
@@ -38,7 +38,7 @@ export default function RechercherScreen() {
   const fetchVillesActuelles = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('https://troubled-red-garb.cyclic.app/professeurs');
+      const response = await fetch('https://tiny-worm-nightgown.cyclic.app/professeurs');
       const data = await response.json();
       const allVillesActuelles = Array.from(new Set(data.map((item) => item.villeFaculteActuelle))).sort();
       setVillesActuelles(allVillesActuelles);
@@ -51,7 +51,7 @@ export default function RechercherScreen() {
   const fetchVillesDesirees = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('https://troubled-red-garb.cyclic.app/professeurs');
+      const response = await fetch('https://tiny-worm-nightgown.cyclic.app/professeurs');
       const data = await response.json();
       const allVillesDesirees = Array.from(new Set(data.flatMap((item) => item.villeDesiree.split(';')))).sort();
       setVillesDesirees(allVillesDesirees);
@@ -64,7 +64,7 @@ export default function RechercherScreen() {
   const fetchSearchResults = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('https://troubled-red-garb.cyclic.app/professeurs');
+      const response = await fetch('https://tiny-worm-nightgown.cyclic.app/professeurs');
       const data = await response.json();
 
       let filteredResults = data;
