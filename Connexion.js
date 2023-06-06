@@ -38,7 +38,7 @@ export default function LoginScreen() {
         setIsLoggedIn(true);
       } else {
         // L'email n'existe pas dans l'API
-        setErrorMessage('Email non trouvé');
+        setErrorMessage('Email not found. Please check if the spelling of the email is correct? ');
       }
     } catch (error) {
       console.log('Une erreur s\'est produite lors de la vérification de l\'email:', error);
@@ -75,7 +75,7 @@ export default function LoginScreen() {
             style={[styles.tabButton, activeTab === 'Profil' && styles.activeTabButton]}
             onPress={() => handleTabPress('Profil')}
           >
-            <Text style={styles.tabButtonText}>Profil</Text>
+            <Text style={styles.tabButtonText}>Profile</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={[styles.tabButton, activeTab === 'Rechercher' && styles.activeTabButton]}
@@ -87,7 +87,7 @@ export default function LoginScreen() {
             style={[styles.tabButton, activeTab === 'Combinaison' && styles.activeTabButton]}
             onPress={() => handleTabPress('Combinaison')}
           >
-            <Text style={styles.tabButtonText}>Combinaison</Text>
+            <Text style={styles.tabButtonText}>combination</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={handleLogout}>
             <Text style={styles.signOutButton}>Sign Out</Text>
@@ -98,14 +98,14 @@ export default function LoginScreen() {
           <Text style={styles.title}>Authentification</Text>
           <TextInput
             style={styles.input}
-            placeholder="Adresse Email"
+            placeholder="Email address"
             value={email}
             onChangeText={text => setEmail(text.toLowerCase())} // Convertir en minuscule
             keyboardType="email-address"
           />
           <TextInput
             style={styles.input}
-            placeholder="Mot de passe"
+            placeholder="Password"
             value={password}
             onChangeText={setPassword}
             secureTextEntry
@@ -113,7 +113,7 @@ export default function LoginScreen() {
           <Button title="Log In" onPress={handleLogin} />
           <Text style={styles.errorMessage}>{errorMessage}</Text>
           <TouchableOpacity onPress={handleForgotPassword}>
-            <Text style={styles.forgotPasswordText}>Mot de passe oublié ?</Text>
+            <Text style={styles.forgotPasswordText}>Forgot your password?</Text>
           </TouchableOpacity>
         </View>
       )}
@@ -121,9 +121,9 @@ export default function LoginScreen() {
       <Modal visible={forgotPasswordVisible} animationType="slide" transparent={true}>
         <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
-            <Text style={styles.modalTitle}>Réinitialisation du mot de passe</Text>
+            <Text style={styles.modalTitle}>Reset password</Text>
             <Text style={styles.modalDescription}>
-              Veuillez entrer votre adresse email pour réinitialiser votre mot de passe :
+            Please enter your email address to reset your password:
             </Text>
             <TextInput
               style={styles.modalInput}
@@ -134,7 +134,7 @@ export default function LoginScreen() {
             />
             <Button title="Reset Password" onPress={handleResetPassword} />
             <TouchableOpacity onPress={() => setForgotPasswordVisible(false)}>
-              <Text style={styles.modalCancelText}>Annuler</Text>
+              <Text style={styles.modalCancelText}>Cancel</Text>
             </TouchableOpacity>
           </View>
         </View>
