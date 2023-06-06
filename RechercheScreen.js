@@ -101,45 +101,45 @@ export default function RechercherScreen() {
     <ScrollView style={styles.container1}>
       {isLoading ? (
         <View style={styles.loadingContainer}>
-          <Text style={styles.loadingText}>Chargement...</Text>
+          <Text style={styles.loadingText}>Loading...</Text>
         </View>
       ) : (
         <View style={styles.container}>
-          <Text style={styles.label}>Spécialité :</Text>
+          <Text style={styles.label}>Specialty :</Text>
           <Picker
             selectedValue={selectedSpecialite}
             onValueChange={(itemValue) => setSelectedSpecialite(itemValue)}
           >
-            <Picker.Item label="Toutes les spécialités" value="" />
+            <Picker.Item label="All the  specialtys" value="" />
             {specialites.map((specialite, index) => (
               <Picker.Item key={index} label={specialite} value={specialite} />
             ))}
           </Picker>
 
-          <Text style={styles.label}>Ville actuelle :</Text>
+          <Text style={styles.label}>Current city :</Text>
           <Picker
             selectedValue={selectedVilleActuelle}
             onValueChange={(itemValue) => setSelectedVilleActuelle(itemValue)}
           >
-            <Picker.Item label="Toutes les villes" value="" />
+            <Picker.Item label="All the cities" value="" />
             {villesActuelles.map((ville, index) => (
               <Picker.Item key={index} label={ville} value={ville} />
             ))}
           </Picker>
 
-          <Text style={styles.label}>Ville désirée :</Text>
+          <Text style={styles.label}>Desired cities :</Text>
           <Picker
             selectedValue={selectedVilleDesiree}
             onValueChange={(itemValue) => setSelectedVilleDesiree(itemValue)}
           >
-            <Picker.Item label="Toutes les villes" value="" />
+            <Picker.Item label="All the cities" value="" />
             {villesDesirees.map((ville, index) => (
               <Picker.Item key={index} label={ville} value={ville} />
             ))}
           </Picker>
 
           <View style={styles.resultsContainer}>
-            <Text style={styles.resultsTitle}>Résultats de la recherche:</Text>
+            <Text style={styles.resultsTitle}>Search results</Text>
             {searchResults.length > 0 ? (
               searchResults.map((professeur, index) => (
                 <View key={index} style={styles.resultItem}>
@@ -150,7 +150,7 @@ export default function RechercherScreen() {
                 </View>
               ))
             ) : (
-              <Text style={styles.noResultsText}>Chargement...</Text>
+              <Text style={styles.noResultsText}>Loading...</Text>
             )}
           </View>
         </View>
