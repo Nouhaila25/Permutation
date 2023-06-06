@@ -76,7 +76,7 @@ export default function CombinaisonScreen() {
 
     return (
       <View>
-        <Text style={styles.combinaisonsTitle}>Combinaisons :</Text>
+        <Text style={styles.combinaisonsTitle}>combination :</Text>
         {combinaisons.map((combinaison, index) => (
           <Text key={index} style={styles.combinaisonText}>
             {`${combinaison.professeurActuel} - ${combinaison.villeFaculteActuelle} -> ${combinaison.villeDesiree}`}
@@ -89,12 +89,12 @@ export default function CombinaisonScreen() {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.dropdownContainer}>
-        <Text style={styles.label}>Spécialité :</Text>
+        <Text style={styles.label}>Specialty :</Text>
         <Picker
           selectedValue={selectedSpecialite}
           onValueChange={(itemValue) => setSelectedSpecialite(itemValue)}
         >
-          <Picker.Item label="Sélectionnez la spécialité" value="" />
+          <Picker.Item label="Select the specialization" value="" />
           {specialites
             .filter((specialite) => specialite !== "Selectionnez la spécialité")
             .map((specialite, index) => (
@@ -105,7 +105,7 @@ export default function CombinaisonScreen() {
 
       {selectedSpecialite ? (
         <View>
-          <Text style={styles.graphTitle}>Graphique des professeurs pour la spécialité {selectedSpecialite}</Text>
+          <Text style={styles.graphTitle}>Graph of professors for the specialty {selectedSpecialite}</Text>
           {renderGraph()}
           {renderCombinaisons()}
         </View>
