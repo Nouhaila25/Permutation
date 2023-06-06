@@ -16,7 +16,7 @@ export default function CombinaisonScreen() {
 
   const fetchSpecialites = async () => {
     try {
-      const response = await fetch('https://troubled-red-garb.cyclic.app/professeurs');
+      const response = await fetch('https://tiny-worm-nightgown.cyclic.app/professeurs');
       if (!response.ok) {
         throw new Error('Erreur lors de la récupération des spécialités');
       }
@@ -30,7 +30,7 @@ export default function CombinaisonScreen() {
 
   const fetchProfesseurs = async () => {
     try {
-      const response = await fetch('https://troubled-red-garb.cyclic.app/professeurs');
+      const response = await fetch('https://tiny-worm-nightgown.cyclic.app/professeurs');
       if (!response.ok) {
         throw new Error('Erreur lors de la récupération des professeurs');
       }
