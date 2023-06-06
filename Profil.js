@@ -61,7 +61,7 @@ export default function ProfilScreen() {
   if (!profil) {
     return (
       <View style={styles.container}>
-        <Text>Chargement du profil...</Text>
+        <Text>Loadingof the  profile...</Text>
       </View>
     );
   }
@@ -71,7 +71,7 @@ export default function ProfilScreen() {
     <View style={styles.container}>
       
       <View style={styles.infoContainer}>
-        <Text style={styles.label}>Nom:</Text>
+        <Text style={styles.label}>Last name:</Text>
         <TextInput
           style={styles.input}
           value={nom}
@@ -79,7 +79,7 @@ export default function ProfilScreen() {
         />
       </View>
       <View style={styles.infoContainer}>
-        <Text style={styles.label}>Prénom:</Text>
+        <Text style={styles.label}>First name:</Text>
         <TextInput
           style={styles.input}
           value={prenom}
@@ -87,7 +87,7 @@ export default function ProfilScreen() {
         />
       </View>
       <View style={styles.infoContainer}>
-        <Text style={styles.label}>Téléphone:</Text>
+        <Text style={styles.label}>Telephone:</Text>
         <TextInput
           style={styles.input}
           value={telephone}
@@ -103,7 +103,7 @@ export default function ProfilScreen() {
         />
       </View>
       <View style={styles.infoContainer}>
-        <Text style={styles.label}>Grade:</Text>
+        <Text style={styles.label}>Rank:</Text>
         <TextInput
           style={styles.input}
           value={garde}
@@ -111,7 +111,7 @@ export default function ProfilScreen() {
         />
       </View>
       <View style={styles.infoContainer}>
-        <Text style={styles.label}>Etablissement:</Text>
+        <Text style={styles.label}>Institution:</Text>
         <TextInput
           style={styles.input}
           value={etablissement}
@@ -119,7 +119,7 @@ export default function ProfilScreen() {
         />
       </View>
       <View style={styles.infoContainer}>
-        <Text style={styles.label}>Spécialité:</Text>
+        <Text style={styles.label}>Specialty:</Text>
         <TextInput
           style={styles.input}
           value={specialite}
@@ -127,7 +127,7 @@ export default function ProfilScreen() {
         />
       </View>
       <View style={styles.infoContainer}>
-        <Text style={styles.label}>Ville Actuelle:</Text>
+        <Text style={styles.label}>Current city:</Text>
         <TextInput
           style={styles.input}
           value={villeActuelle}
@@ -135,15 +135,15 @@ export default function ProfilScreen() {
         />
       </View>
       <View style={styles.infoContainer}>
-        <Text style={styles.label}>Villes Désirées:</Text>
+        <Text style={styles.label}>Desired cities:</Text>
         <TextInput
           style={styles.input}
           value={villeDesiree}
           onChangeText={ setVilleDesi}
         />
       </View>
-      <Button title="Supprimer le compte" onPress={handleDeleteAccount} color="red" />
-      <Button title="Modifier les informations" onPress={handleEditProfile} />
+      <Button title="Remove the account" onPress={handleDeleteAccount} color="red" />
+      <Button title="Modify the information" onPress={handleEditProfile} />
     </View>
     
   );
