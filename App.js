@@ -20,7 +20,7 @@ export default function App() {
         <NavigationContainer>
           <Tab.Navigator>
             <Tab.Screen
-              name="Accueil"
+              name="Home"
               component={Accueil}
               options={{
                 tabBarIcon: ({ color, size }) => (
@@ -29,7 +29,7 @@ export default function App() {
               }}
             />
             <Tab.Screen
-              name="Inscription"
+              name="Registration"
               component={Inscription}
               options={{
                 tabBarIcon: ({ color, size }) => (
@@ -38,7 +38,7 @@ export default function App() {
               }}
             />
             <Tab.Screen
-              name="A propos"
+              name="About"
               component={Apropos}
               options={{
                 tabBarIcon: ({ color, size }) => (
@@ -47,7 +47,7 @@ export default function App() {
               }}
             />
             <Tab.Screen
-              name="Connexion"
+              name="Login"
               component={Connexion}
               options={{
                 tabBarIcon: ({ color, size }) => (
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
 });
 
 function HomeScreen() {
-  return <View style={styles.screenContainer}><Text>Accueil</Text></View>;
+  return <View style={styles.screenContainer}><Text>Acceuil</Text></View>;
 }
 
 function RegistrationScreen() {
