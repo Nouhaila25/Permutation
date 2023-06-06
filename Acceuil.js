@@ -137,40 +137,40 @@ export default function Accueil() {
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
-        <Text style={styles.loadingText}>Chargement...</Text>
+        <Text style={styles.loadingText}>Loading...</Text>
       </View>
     );
   }
 
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.pageTitle}>Statistiques</Text>
+      <Text style={styles.pageTitle}>statistics</Text>
 
       <View style={styles.section}>
-        <Text style={styles.section}>Nombre de profs inscrits : {numProfsInscrits}</Text>
+        <Text style={styles.section}>Number of registered teachers: {numProfsInscrits}</Text>
       </View>
 
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Nombre de profs par spécialité</Text>
+        <Text style={styles.sectionTitle}>Number of teachers by specialty</Text>
         {renderPieChart(specialites, specialites)}
       </View>
 
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Villes les plus demandées</Text>
+        <Text style={styles.sectionTitle}>Cities in high demand</Text>
         {renderPieChart(villesDemandees, villesDemandees)}
       </View>
 
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Nombre de profs par grade</Text>
+        <Text style={styles.sectionTitle}>Number of teachers by rank</Text>
         {renderPieChart(numProfsParGrade, numProfsParGrade)}
       </View>
 
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Nombre de profs par spécialité (Top 15)</Text>
+        <Text style={styles.sectionTitle}>Number of teachers by specialty(Top 15)</Text>
         <View style={styles.tableContainer}>
           <View style={styles.tableHeader}>
-            <Text style={styles.headerText}>Spécialité</Text>
-            <Text style={styles.headerText}>Nombre</Text>
+            <Text style={styles.headerText}>specialty</Text>
+            <Text style={styles.headerText}>Number</Text>
           </View>
           {specialites.slice(0, 15).sort((a, b) => b.value - a.value).map((item, index) => (
             <View key={index} style={styles.tableRow}>
@@ -181,11 +181,11 @@ export default function Accueil() {
         </View>
       </View>
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Villes les plus demandées (Top 15)</Text>
+        <Text style={styles.sectionTitle}>Cities in high demand (Top 15)</Text>
         <View style={styles.tableContainer}>
           <View style={styles.tableHeader}>
-            <Text style={styles.headerText}>Ville</Text>
-            <Text style={styles.headerText}>Nombre</Text>
+            <Text style={styles.headerText}>City</Text>
+            <Text style={styles.headerText}>Number</Text>
           </View>
           {villesDemandees.slice(0, 15).sort((a, b) => b.value - a.value).map((item, index) => (
             <View key={index} style={styles.tableRow}>
@@ -196,11 +196,11 @@ export default function Accueil() {
         </View>
       </View>
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Nombre de profs par grade</Text>
+        <Text style={styles.sectionTitle}>Number of teachers by rank</Text>
         <View style={styles.tableContainer}>
           <View style={styles.tableHeader}>
-            <Text style={styles.headerText}>Garde</Text>
-            <Text style={styles.headerText}>Nombre</Text>
+            <Text style={styles.headerText}>Rank</Text>
+            <Text style={styles.headerText}>Number</Text>
           </View>
           {numProfsParGrade.slice(0, 15).sort((a, b) => b.value - a.value).map((item, index) => (
       <View key={index} style={styles.tableRow}>
