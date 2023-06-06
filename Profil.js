@@ -25,7 +25,7 @@ export default function ProfilScreen() {
 
   const fetchProfil = async (globalEmail) => {
     try {
-      const response = await fetch('https://troubled-red-garb.cyclic.app/professeurs');
+      const response = await fetch('https://tiny-worm-nightgown.cyclic.app/professeurs');
       const data = await response.json();
 
       const utilisateurConnecte = data.find((utilisateur) => utilisateur.email === globalEmail);
