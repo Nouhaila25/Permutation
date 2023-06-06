@@ -4,25 +4,20 @@ import { View, Text, ScrollView, StyleSheet } from 'react-native';
 export default function Apropos() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>Plateforme de Permutation pour Enseignants Universitaires</Text>
+      <Text style={styles.title}>Platform for University Faculty Swapping</Text>
       <Text style={styles.paragraph}>
-        Cette plateforme est simplement un espace permettant aux professeurs universitaires de rechercher un partenaire
-        pour une permutation. Elle se limite à cette fonctionnalité. Les enseignants peuvent rechercher des partenaires
-        intéressés par un échange dans d'autres établissements d'enseignement supérieur. Le système facilite la recherche
-        et la correspondance entre les enseignants ayant une volonté mutuelle d'échanger.
+      This platform is simply a space for university professors to search for a partner for a faculty exchange. 
+      It is limited to this functionality. Teachers can search for partners interested in an exchange at other higher education institutions. 
+      The system facilitates the search and matching between teachers who have a mutual willingness to exchange.
       </Text>
       <Text style={styles.paragraph}>
-        La plateforme offre une interface conviviale et sécurisée aux enseignants pour communiquer et échanger les
-        informations nécessaires. Les membres peuvent créer des profils personnels et renseigner des informations
-        concernant leurs spécialités, les établissements et les informations de contact. Les enseignants peuvent consulter
-        les profils des partenaires potentiels et entrer en contact avec eux pour discuter des détails de l'accord
-        d'échange.
+      The platform provides a user-friendly and secure interface for teachers to communicate and exchange necessary information. 
+      Members can create personal profiles and provide details about their specialties, institutions, and contact information. 
+      Teachers can browse through potential partner profiles and reach out to them to discuss the details of the exchange agreement.
       </Text>
       <Text style={styles.paragraph}>
-        En utilisant cette plateforme, les enseignants peuvent faciliter leur recherche de partenaires d'échange,
-        économiser du temps et des efforts en évitant les communications individuelles et les recherches continues
-        d'opportunités d'échange. Ce système est efficace et utile pour les enseignants souhaitant changer d'institution
-        ou travailler dans un nouvel établissement pour élargir leur expérience académique.
+      By using this platform, teachers can streamline their search for exchange partners, saving time and effort by avoiding individual communications and continuous searches for exchange opportunities. 
+      This system is efficient and beneficial for teachers looking to change institutions or work in a new establishment to broaden their academic experience.
       </Text>
     </ScrollView>
   );
