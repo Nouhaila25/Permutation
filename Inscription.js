@@ -24,28 +24,28 @@ export default function Inscription() {
     <View style={styles.container}>
       
       <View style={styles.inputContainer}>
-        <Text style={styles.inputLabel}>Nom</Text>
+        <Text style={styles.inputLabel}>Last name</Text>
         <TextInput
           style={styles.input}
-          placeholder="Entrez votre nom"
+          placeholder="Enter your last name"
           value={nom}
           onChangeText={setNom}
         />
       </View>
       <View style={styles.inputContainer}>
-        <Text style={styles.inputLabel}>Prénom</Text>
+        <Text style={styles.inputLabel}>First name</Text>
         <TextInput
           style={styles.input}
-          placeholder="Entrez votre prénom"
+          placeholder="Enter your first name"
           value={prenom}
           onChangeText={setPrenom}
         />
       </View>
       <View style={styles.inputContainer}>
-        <Text style={styles.inputLabel}>Téléphone</Text>
+        <Text style={styles.inputLabel}>Telephone</Text>
         <TextInput
           style={styles.input}
-          placeholder="Entrez votre numéro de téléphone"
+          placeholder="Enter your phone number"
           value={telephone}
           onChangeText={setTelephone}
           keyboardType="phone-pad"
@@ -55,68 +55,68 @@ export default function Inscription() {
         <Text style={styles.inputLabel}>Email</Text>
         <TextInput
           style={styles.input}
-          placeholder="Entrez votre adresse email"
+          placeholder="Enter your email address"
           value={email}
           onChangeText={setEmail}
           keyboardType="email-address"
         />
       </View>
       <View style={styles.inputContainer}>
-        <Text style={styles.inputLabel}>Mot de passe</Text>
+        <Text style={styles.inputLabel}>Password</Text>
         <TextInput
           style={styles.input}
-          placeholder="Entrez votre mot de passe"
+          placeholder="Enter your password"
           value={motDePasse}
           onChangeText={setMotDePasse}
           secureTextEntry
         />
       </View>
       <View style={styles.inputContainer}>
-        <Text style={styles.inputLabel}>Grade</Text>
+        <Text style={styles.inputLabel}>Rank</Text>
         <TextInput
           style={styles.input}
-          placeholder="Choisissez votre grade"
+          placeholder="Enter your rank"
           value={grade}
           onChangeText={setGrade}
         />
       </View>
       <View style={styles.inputContainer}>
-        <Text style={styles.inputLabel}>Etablissement</Text>
+        <Text style={styles.inputLabel}>Institution</Text>
         <TextInput
           style={styles.input}
-          placeholder="Entrez votre établissement"
+          placeholder="Enter your institution"
           value={etablissement}
           onChangeText={setEtablissement}
         />
       </View>
       <View style={styles.inputContainer}>
-        <Text style={styles.inputLabel}>Spécialité</Text>
+        <Text style={styles.inputLabel}>Specialty</Text>
         <TextInput
           style={styles.input}
-          placeholder="Choisissez une spécialité"
+          placeholder="Enter your specialty"
           value={specialite}
           onChangeText={setSpecialite}
         />
       </View>
       <View style={styles.inputContainer}>
-        <Text style={styles.inputLabel}>Ville Actuelle</Text>
+        <Text style={styles.inputLabel}>Current city</Text>
         <TextInput
           style={styles.input}
-          placeholder="Choisissez une ville"
+          placeholder="Enter your current city"
           value={villeActuelle}
           onChangeText={setVilleActuelle}
         />
       </View>
       <View style={styles.inputContainer}>
-        <Text style={styles.inputLabel}>Villes Désirées</Text>
+        <Text style={styles.inputLabel}>Desired cities</Text>
         <TextInput
           style={styles.input}
-          placeholder="Select..."
+          placeholder="Enter your desired cities"
           value={villesDesirees}
           onChangeText={setVillesDesirees}
         />
       </View>
-      <Button title="Inscription" onPress={handleInscription} />
+      <Button title="Registration" onPress={handleInscription} />
     </View>
     </ScrollView>
   );
